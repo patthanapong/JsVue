@@ -11,19 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/testVueJs', function () {
-    return view('test');
-});
-Route::get('/slide', function () {
-    return view('slide');
-});
-Route::get('/show', function () {
-    return view('showAndHide');
-});
-Route::get('/jump', function () {
-    return view('jump');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/product/index', 'ProductController@index');
+Route::get('/product/create', 'ProductController@create');
+Route::post('/product', 'ProductController@store');
